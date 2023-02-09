@@ -6,11 +6,24 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Auth;
 use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
+
+    public function typeName() {
+        if (Auth::user()->type == 0) {
+            return 'User';
+        }
+        elseif (Auth::user()->type == 1) {
+            return 'Creator';
+        }
+        else {
+            return 'Admin';
+        }
+    }
 
     /**
      * The attributes that are mass assignable.
@@ -18,6 +31,7 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
+        'type',
         'name',
         'email',
         'password',

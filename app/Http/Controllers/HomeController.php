@@ -24,6 +24,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('users.user');
+        switch (Auth::user()->type) {
+            case 0:
+                return view('users.user');
+            case 1:
+                return view('users.creator');
+            case 2:
+                return view('users.admin');
+        }
+        return null;
     }
 }

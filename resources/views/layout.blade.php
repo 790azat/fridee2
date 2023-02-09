@@ -12,7 +12,7 @@
 <body style="background: url('{{ asset('images/background1.svg') }}');background-attachment: fixed;background-size: cover;background-repeat: no-repeat">
 @yield('content')
 @livewireScripts
-@if(1)
+@if(env('TURBO_MODE'))
     <script type="module">
         import hotwiredTurbo from 'https://cdn.skypack.dev/@hotwired/turbo';
     </script>
