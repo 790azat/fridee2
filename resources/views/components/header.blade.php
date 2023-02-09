@@ -7,29 +7,28 @@
             <div>
                 <p class="fw-bold fs-4" style="font-family: Lobster">ridee</p>
             </div>
+        </a>
+        @guest
             <div class="ms-5 d-flex gap-2 text-secondary align-items-center fs-4">
                 <a href=""><i class="fa-brands fa-facebook"></i></a>
                 <a href=""><i class="fa-brands fa-instagram"></i></a>
                 <a href=""><i class="fa-brands fa-telegram"></i></a>
             </div>
-        </a>
-        <div class="ms-auto d-flex align-items-center gap-3 fw-bold text-secondary">
-            <a href="/">Home</a>
-            <a href="/">Services</a>
-            <a href="/">Pricing</a>
-            <a href="/">About us</a>
-            <a href="/">Contacts</a>
-        </div>
-        @guest
+            <div class="ms-auto d-flex align-items-center gap-3 fw-bold text-secondary">
+                <a href="/">Home</a>
+                <a href="/">Services</a>
+                <a href="/">Pricing</a>
+                <a href="/">About us</a>
+                <a href="/">Contacts</a>
+            </div>
             <div class="ms-3 d-flex align-items-center gap-2">
                 <button class="btn btn-outline-secondary border border-2"><a href="{{ route('login') }}" style="font-family: Lobster"><i class="fa-solid fa-right-to-bracket me-1"></i> Login</a></button>
                 <button class="btn btn-outline-secondary border border-2"><a href="{{ route('register') }}" style="font-family: Lobster"><i class="fa-solid fa-user me-1"></i> Register</a></button>
             </div>
         @endguest
         @auth
-            <div class="ms-4 d-flex align-items-center gap-2">
+            <div class="ms-auto d-flex align-items-center gap-2">
                 <div class="me-3 d-flex gap-3 ms-3 text-secondary fs-4">
-                    <div class="vr"></div>
                     <a href="{{ route('home') }}"><i class="fa-regular fa-message"></i></a>
                     <div class="vr"></div>
                     <a href="{{ route('home') }}"><i class="fa-regular fa-bell"></i></a>
