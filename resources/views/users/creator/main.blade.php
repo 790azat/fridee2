@@ -3,12 +3,12 @@
 @section('content')
     <div class="col-12 bg-light d-flex align-items-start">
         <div class="p-4 shadow ps-0 d-flex flex-column align-items-start justify-content-center vh-100 gap-5">
-            <a href="" class="ps-4 border-start border-5 @if(Route::current()->uri == 'home') border-primary @else border-light text-secondary opacity-75 @endif"><i class="fa-solid fa-home"></i></a>
-            <a href="" class="ps-4 border-start border-5 @if(Route::current()->uri == 'video') border-primary @else border-light text-secondary opacity-75 @endif"><i class="fa-solid fa-video"></i></a>
-            <a href="" class="ps-4 border-start border-5 @if(Route::current()->uri == 'calendar') border-primary @else border-light text-secondary opacity-75 @endif"><i class="fa-solid fa-calendar-days"></i></a>
-            <a href="" class="ps-4 border-start border-5 @if(Route::current()->uri == 'tasks') border-primary @else border-light text-secondary opacity-75 @endif"><i class="fa-solid fa-clipboard-check"></i></a>
-            <a href="" class="ps-4 border-start border-5 @if(Route::current()->uri == 'chart') border-primary @else border-light text-secondary opacity-75 @endif"><i class="fa-solid fa-chart-simple"></i></a>
-            <a href="" class="ps-4 border-start border-5 @if(Route::current()->uri == 'settings') border-primary @else border-light text-secondary opacity-75 @endif"><i class="fa-solid fa-gear"></i></a>
+            <a href="{{ route('creator.home') }}" class="ps-4 border-start border-5 @if(Route::current()->getActionMethod() == 'home') border-primary @else border-light text-secondary opacity-75 @endif"><i class="fa-solid fa-home"></i></a>
+            <a href="{{ route('creator.videos') }}" class="ps-4 border-start border-5 @if(Route::current()->getActionMethod() == 'videos') border-primary @else border-light text-secondary opacity-75 @endif"><i class="fa-solid fa-video"></i></a>
+            <a href="{{ route('creator.calendar') }}" class="ps-4 border-start border-5 @if(Route::current()->getActionMethod() == 'calendar') border-primary @else border-light text-secondary opacity-75 @endif"><i class="fa-solid fa-calendar-days"></i></a>
+            <a href="{{ route('creator.tasks') }}" class="ps-4 border-start border-5 @if(Route::current()->getActionMethod() == 'tasks') border-primary @else border-light text-secondary opacity-75 @endif"><i class="fa-solid fa-clipboard-check"></i></a>
+            <a href="{{ route('creator.chart') }}" class="ps-4 border-start border-5 @if(Route::current()->getActionMethod() == 'chart') border-primary @else border-light text-secondary opacity-75 @endif"><i class="fa-solid fa-chart-simple"></i></a>
+            <a href="{{ route('creator.settings') }}" class="ps-4 border-start border-5 @if(Route::current()->getActionMethod() == 'settings') border-primary @else border-light text-secondary opacity-75 @endif"><i class="fa-solid fa-gear"></i></a>
             <a href="" class="ps-4 border-start border-5 border-light text-secondary opacity-75"><i class="fa-solid fa-right-to-bracket"></i></a>
         </div>
         <div class="col">
@@ -24,7 +24,7 @@
                     </a>
                     <div class="mx-4 vr"></div>
                     <div class="d-flex align-items-center">
-                        <p class="fw-bold">{{ ucfirst(Route::current()->uri) }}</p>
+                        <p class="fw-bold">{{ ucfirst(Route::current()->getActionMethod()) }}</p>
                     </div>
                     <div class="ms-auto d-flex align-items-center gap-2">
                         <div class="me-3 d-flex gap-3 ms-3 text-secondary fs-4">
@@ -55,8 +55,8 @@
                 </div>
             </div>
             <div class="col-12 p-5">
-                <div class="bg-white rounded-3 shadow-sm d-flex p-3">
-
+                <div class="bg-white rounded-3 shadow-sm d-flex">
+                    @yield('info')
                 </div>
             </div>
         </div>
