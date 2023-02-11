@@ -55,7 +55,7 @@
                 </div>
             </div>
             <div class="col-12 p-5">
-                <div class="bg-white rounded-3 shadow-sm d-flex">
+                <div class="bg-white rounded-3 shadow-sm d-flex align-items-start">
                     @yield('info')
                 </div>
             </div>
