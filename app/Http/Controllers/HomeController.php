@@ -28,7 +28,7 @@ class HomeController extends Controller
             case 0:
                 return view('users.user');
             case 1:
-                return redirect()->route('creator.home');
+                return redirect()->route('creator.messages');
             case 2:
                 return view('users.admin');
         }

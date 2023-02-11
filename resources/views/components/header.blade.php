@@ -34,8 +34,8 @@
                     <a href="{{ route('home') }}"><i class="fa-regular fa-bell"></i></a>
                 </div>
                 <a href="{{ route('home') }}" class="d-flex align-items-center">
-                    <div class="rounded-2 overflow-hidden me-3">
-                        <img src="https://api.dicebear.com/5.x/bottts-neutral/svg?seed={{ Auth::user()->name }}1" style="width: 50px;height: 50px" alt="">
+                    <div class="rounded-4 overflow-hidden me-3">
+                        <img src="{{ asset('/storage/users-avatar/' . Auth::user()->avatar) }}" style="width: 50px;height: 50px;object-fit: cover" alt="">
                     </div>
                     <div>
                         <div>
@@ -56,4 +56,5 @@
         @endauth
     </div>
 </div>
+
 

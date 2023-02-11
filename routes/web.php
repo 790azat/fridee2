@@ -29,7 +29,7 @@ Route::get('/c/{command}', function ($command) {
 
 Route::view('/','welcome')->name('welcome');
 
-Route::get('/creator/home',[CreatorController::class,'home'])->name('creator.home');
+Route::get('/creator/messages',[CreatorController::class,'messages'])->name('creator.messages');
 Route::get('/creator/videos',[CreatorController::class,'videos'])->name('creator.videos');
 Route::get('/creator/calendar',[CreatorController::class,'calendar'])->name('creator.calendar');
 Route::get('/creator/tasks',[CreatorController::class,'tasks'])->name('creator.tasks');

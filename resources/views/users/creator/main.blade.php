@@ -3,7 +3,7 @@
 @section('content')
     <div class="col-12 bg-light d-flex align-items-start">
         <div class="p-4 shadow ps-0 d-flex flex-column align-items-start justify-content-center vh-100 gap-5">
-            <a href="{{ route('creator.home') }}" class="ps-4 border-start border-5 @if(Route::current()->getActionMethod() == 'home') border-primary @else border-light text-secondary opacity-75 @endif"><i class="fa-solid fa-home"></i></a>
+            <a href="{{ route('creator.messages') }}" class="ps-4 border-start border-5 @if(Route::current()->getActionMethod() == 'messages') border-primary @else border-light text-secondary opacity-75 @endif"><i class="fa-solid fa-message"></i></a>
             <a href="{{ route('creator.videos') }}" class="ps-4 border-start border-5 @if(Route::current()->getActionMethod() == 'videos') border-primary @else border-light text-secondary opacity-75 @endif"><i class="fa-solid fa-video"></i></a>
             <a href="{{ route('creator.calendar') }}" class="ps-4 border-start border-5 @if(Route::current()->getActionMethod() == 'calendar') border-primary @else border-light text-secondary opacity-75 @endif"><i class="fa-solid fa-calendar-days"></i></a>
             <a href="{{ route('creator.tasks') }}" class="ps-4 border-start border-5 @if(Route::current()->getActionMethod() == 'tasks') border-primary @else border-light text-secondary opacity-75 @endif"><i class="fa-solid fa-clipboard-check"></i></a>
@@ -28,13 +28,13 @@
                     </div>
                     <div class="ms-auto d-flex align-items-center gap-2">
                         <div class="me-3 d-flex gap-3 ms-3 text-secondary fs-4">
-                            <a href="{{ route('home') }}"><i class="fa-regular fa-message"></i></a>
+                            <a href="{{ route('creator.messages') }}"><i class="fa-regular fa-message"></i></a>
                             <div class="vr"></div>
                             <a href="{{ route('home') }}"><i class="fa-regular fa-bell"></i></a>
                         </div>
                         <a href="{{ route('home') }}" class="d-flex align-items-center">
-                            <div class="rounded-2 overflow-hidden me-3">
-                                <img src="https://api.dicebear.com/5.x/bottts-neutral/svg?seed={{ Auth::user()->name }}1" style="width: 50px;height: 50px" alt="">
+                            <div class="rounded-4 overflow-hidden me-3">
+                                <img src="{{ asset('/storage/users-avatar/' . Auth::user()->avatar) }}" style="width: 50px;height: 50px;object-fit: cover" alt="">
                             </div>
                             <div>
                                 <div>
@@ -54,8 +54,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 p-5">
-                <div class="bg-white rounded-3 shadow-sm d-flex align-items-start">
+            <div class="col-12 p-4">
+                <div class="bg-white rounded-3 overflow-hidden shadow-sm d-flex align-items-start" style="height: 500px">
                     @yield('info')
                 </div>
             </div>
