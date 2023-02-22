@@ -1,9 +1,8 @@
 <div class="col-12 mt-5">
     <div class="container d-flex">
         <div class="col-6">
-            <div class="mt-5 d-flex align-items-center">
-                <img src="{{ asset('images/f2.png') }}" style="width: 150px" alt="">
-                <p class="fw-bold fs-1" style="font-family: Lobster">ridee studio</p>
+            <div class="mt-5 d-flex align-items-center mb-3">
+                <img src="{{ asset('images/icons/Fridee logo with text black.png') }}" style="width: 150px" alt="">
             </div>
             <div class="">
                 <p class="text-secondary fs-5">

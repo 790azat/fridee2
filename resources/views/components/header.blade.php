@@ -2,11 +2,11 @@
     <div class="container py-3 d-flex">
         <a href="{{ route('welcome') }}" class="d-flex align-items-center">
             <div>
-                <img src="{{ asset('images/f1.png') }}" style="width: 50px" alt="">
+                <img src="{{ asset('images/icons/Fridee logo with text black.png') }}" style="width: 100px" alt="">
             </div>
-            <div>
-                <p class="fw-bold fs-4" style="font-family: Lobster">ridee</p>
-            </div>
+{{--            <div>--}}
+{{--                <p class="fw-bold fs-4" style="font-family: Lobster">ridee</p>--}}
+{{--            </div>--}}
         </a>
         @guest
             <div class="ms-5 d-flex gap-2 text-secondary align-items-center fs-4">

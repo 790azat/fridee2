@@ -23,7 +23,7 @@
                     <label for="name" class="fw-bold">Name</label>
                 </div>
                 <div class="col-12 mb-2">
-                    <input id="name" placeholder="Name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                    <input id="name" placeholder="Name" type="text" class="form-control bg-white @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
                     @error('name')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
@@ -34,7 +34,7 @@
                     <label for="email" class="fw-bold">Email</label>
                 </div>
                 <div class="col-12 mb-1">
-                    <input id="email" placeholder="Email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                    <input id="email" placeholder="Email" type="email" class="form-control bg-white @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
                     @error('email')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
@@ -45,7 +45,7 @@
                     <label for="password" class="fw-bold">Password</label>
                 </div>
                 <div class="col-12 mb-1">
-                    <input id="password" placeholder="Password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                    <input id="password" placeholder="Password" type="password" class="form-control bg-white @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
                     @error('password')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
@@ -56,7 +56,7 @@
                     <label for="password-confirm" class="fw-bold">Confirm password</label>
                 </div>
                 <div class="col-12 mb-4">
-                    <input id="password-confirm" placeholder="Confirm password" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                    <input id="password-confirm" placeholder="Confirm password" type="password" class="form-control bg-white" name="password_confirmation" required autocomplete="new-password">
                 </div>
                 <div class="col-12 mb-3">
                     <button type="submit" class="btn btn-success col-12">Register</button>
